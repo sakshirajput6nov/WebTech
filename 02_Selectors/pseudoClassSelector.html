@@ -1,0 +1,63 @@
+<!--pseudo class selector i.e. :-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class selector </title>
+    <style>
+        ol>li:first-child{
+            background-color: red;
+        }
+        ol>li:last-child{
+            background-color: blue;
+        }
+        ol>li:nth-child(3){
+            background-color: rgb(0, 255, 221);
+        }
+        div>nav:first-of-type{
+            background-color: blanchedalmond;
+        }
+         div>nav:last-of-type{
+            background-color: rgb(218, 205, 255);
+        }
+        div>nav:nth-of-type(2){
+            background-color: brown;
+        }
+        div>section:first-of-type{
+            background-color: blanchedalmond;
+        }
+         div>section:last-of-type{
+            background-color: rgb(218, 205, 255);
+        }
+        div>section:nth-of-type(2){
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+
+   
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>React</li>
+        <li>NOde js</li>
+    </ol>
+    <div>
+        <header>header1</header>
+        <nav> nav1</nav>
+        <section>section 1</section>
+        <header>header2</header>
+        <nav> nav2</nav>
+        <section>section 2</section>
+        <nav> nav3</nav>
+        <header>header3</header>
+        <nav> nav4</nav>
+        
+    </div>
+
+</body>
+</html>

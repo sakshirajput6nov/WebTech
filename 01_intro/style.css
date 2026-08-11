@@ -1,0 +1,13 @@
+@import url("./basic.css");
+html{
+    --primary:rgb(23, 16, 157);
+}
+h3{
+    --a:pink;
+    --h:blue;
+    color:var(--h);
+    background-color: var(--a);
+}
+div{
+    background-color: rgb(43, 226, 73)!important;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoElementSelectors</title>
+    <style>
+        input::placeholder {
+            color: red;
+        }
+
+        input {
+            color: aqua;
+        }
+
+        h1::selection {
+            background-color: blanchedalmond;
+            color: blueviolet;
+        }
+
+        h3::after {
+            content: "✋🏻";
+        }
+
+        h3::before {
+            content: "😎";
+        }
+
+        ol>li::marker {
+            color: rgb(186, 125, 33);
+        }
+
+        p::first-letter {
+            color: aqua;
+        }
+
+        p::first-line {
+            color: rgb(255, 0, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- for emoji ctrl+cmd+space in mac -->
+    <h1> learn pseudo element selectors </h1>
+    <input type="text" placeholder="enter name "><!--value="rajput-->
+    <h3>hello everyone </h3>
+    <ol>
+        <li>html</li>
+        <li>js</li>
+        <li>python</li>
+    </ol>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit repellat similique vel quaerat
+        repudiandae libero perspiciatis asperiores illum! Doloremque quas minima repudiandae. Esse quis dolorem
+        dignissimos, cum quam aliquid eius sit alias delectus eos! Sunt quas suscipit aut quasi cupiditate dicta,
+        mollitia, debitis autem incidunt nam nesciunt doloribus? Cupiditate?
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+
+        }
+        /* mobile first approach  */
+        h1{
+            background-color: bisque;
+            padding:5px;
+            text-align: center;
+            font-size: 12px;
+            transition: 0.2s;
+            /* for smooth changes in display */
+        }
+        /* name="viewport" is imp. for media query  work incorrectly for responsiveness */
+        /* moblie S   320 px */
+        @media (min-width:320px) {
+            h1{
+                background-color: aquamarine;
+                font-size:14px;
+                padding:5px;
+            }
+        }
+        /* mobile M - 375 px */
+         @media (min-width:375px) {
+        h1{
+            background-color: aliceblue;
+            font-size: 16px;
+            padding:10px;
+        }
+        }
+        /* mobile M - 425 px */
+         @media (min-width:425px) {
+        h1{
+            background-color: rgb(41, 115, 180);
+            font-size: 18px;
+            padding:12px;
+        }
+        }
+         /* mobile M - 768 px */
+         @media (min-width:768px) {
+        h1{
+            background-color: rgb(41, 180, 113);
+            font-size: 30px;
+            padding:15px;
+        }
+        }
+          /* mobile M - 1024 px */
+         @media (min-width:1024px) {
+        h1{
+            background-color: rgb(180, 41, 150);
+            font-size: 38px;
+            padding:20px;
+        }
+        }
+          /* mobile M - 1140 px */
+         @media (min-width :1140px) {
+        h1{
+            background-color: rgb(21, 28, 237);
+            font-size: 38px;
+            padding:20px;
+        }
+        }
+         @media (min-width :1140px) {
+        h1{
+            background-color: rgb(148, 180, 41);
+            font-size: 38px;
+            padding:20px;
+        }
+        }
+        
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>learn media query</h1>
+</body>
+</html>

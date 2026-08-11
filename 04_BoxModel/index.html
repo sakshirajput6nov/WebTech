@@ -1,0 +1,50 @@
+<!-- notes written along with code in comment  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn box model</title>
+    <style>
+        *{
+            /* always write this in css */
+            box-sizing: border-box;
+            margin:0px;
+            padding:0px;
+        }
+        .box1{
+            background-color: rgb(249, 255, 240);
+            height:200px;
+            width: 200px;
+            border:10px solid red;
+            /* padding:20px; */
+            /* padding-left: 20px;
+            padding-bottom: 20px; */
+            padding:20px 10px 20px 10px;
+            /* 4 value : t r b l
+            3 value : t l/r b
+            2 value: t/b l/r
+            1 value: all  */
+            margin:10px ;
+            /* to have overall box height width  200px  */
+            box-sizing:border-box;
+            /* content-box by default */
+        }
+         .box2{
+            background-color: rgb(18, 95, 162);
+            height:200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- there are 4 componenets in box model
+    content :space occupied by data
+    padding : space b/w data and border
+    border :outline on element
+    margin :space around an element  -->
+    <div class="box1">box1 </div>
+    <div class="box2">box2</div>
+
+</body>
+</html>

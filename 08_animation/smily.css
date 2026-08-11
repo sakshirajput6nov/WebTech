@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: bisque;
+}
+.article{
+    margin: 0px;
+    padding:0px;
+    background-color: yellow;
+    border-radius: 50%;
+    
+}

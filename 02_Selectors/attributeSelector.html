@@ -1,0 +1,48 @@
+<!--attribute Selector-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute Selector</title>
+    <style>
+        
+        div[name]{
+            color:blanchedalmond;
+            background-color: black;
+        }
+         div[name="box2"]{
+            color:rgb(235, 156, 39);
+            background-color: rgb(50, 41, 131);
+        }
+        div[name|="box"]{
+            color:rgb(205, 255, 240);
+            background-color: rgb(106, 16, 16);
+        }
+        div[name~="card"]{
+            color:rgb(250, 255, 205);
+            background-color: rgb(177, 131, 155);
+        }
+        div[name^="nav"]{
+            color:white;
+            background-color: black;
+        }
+        div[for$="lay"]{
+            background-color: rgba(62, 29, 161, 0.632);
+        }
+        div[for*="oo"]{
+            background-color: rgba(29, 124, 161, 0.632);
+        }
+    </style>
+</head>
+<body>
+    <h1>attribute Selector</h1>
+    <div name="box1">box 1</div>
+    <div name="box2">box 2</div>
+    <div name="box-wrapper">box 3</div>
+    <div name="card container">box 4</div>
+    <div name="navbar">box 5</div>
+    <div for="overlay">box 6</div>
+    <div for="footer">box 7</div>
+</body>
+</html>
