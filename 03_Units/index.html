@@ -1,0 +1,76 @@
+<!--there are 5 types of units
+1. px - fixed /absolute unit
+2. vh and vw - relative unit
+3. % - relative unit
+4. em - relative unit
+5. rem - relative unit
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>units</title>
+    <style>
+        .box1{
+            background-color: rgb(213, 16, 16);
+            height:200px;
+            width: 200px;
+            border: 5px double black;
+            font-size: 30px;
+
+        }
+        .box2{
+            height:50vh;
+            width:50vw;
+            background-color: blueviolet;
+        }
+        .child{
+            height:10%;
+            background-color: rgb(43, 116, 226);
+            width:50%;
+        }
+        .box4{
+            height:2em;
+            width:2.5em;
+            font-size: 100px;
+            background-color: antiquewhite;
+        }
+        /* html{
+            font-size: 200px;
+        } */
+        .box5{
+            height:1rem;
+            width:1rem;
+            
+            background-color: rgb(187, 121, 36);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>  
+    <!--div.box2--> 
+    <!-- <div id="box3"></div>by  div#box3--> 
+     <!-- box1 is non responsive as though formed by absolute value  :Px value is absolute value i.e. do not depend on change in size of view port or any other thing -->
+     <!-- box 2 and child is responsive due to relative value , % must be with relative for responsive-->
+    <!-- Div color background is by default transparent no color not even white 
+Border dashed, dotted, double,solid,groove -->
+
+     <div class="box2">box2
+        <div class="child">child</div>
+    </div>
+
+    
+    <!-- em rem similarity --
+    by default 1em=16px
+               1rem=16px
+
+    difference --
+    em value dependent on current element font size 
+    rem dependent on root element font size -->
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+
+</body>
+</html>
