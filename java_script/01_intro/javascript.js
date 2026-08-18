@@ -96,7 +96,7 @@ Function
 // console.log()//console is object , log is method 
 
 //! types of variable
- //two types of variable local and global
+//two types of variable local and global
 
 // var
 // let
@@ -156,7 +156,7 @@ Function
 //! var is known as function scope- do not create separate scope for var 
 // function test(){
 //     var x=10;
-   
+
 //     if(true){
 //         var x=12;
 //         console.log(x);//12
@@ -168,7 +168,7 @@ Function
 // let,const is block scoped 
 // function test(){
 //     let x=10;
-   
+
 //     if(true){
 //         let x=12;
 //         console.log(x);//12
@@ -216,7 +216,7 @@ Function
 
 
 
- //!functions
+//!functions
 //  greet() //due to hoisting function declaration avvaliable throughout its scope ,call function before it appears in code
 // function declaration 
 // function greet(){
@@ -256,79 +256,297 @@ Function
 // console.log(greet);
 
 //! funstion expression :used to call anonymous function
-let f1=10;
-console.log(f1);
-let f2=function (){
-   console.log("hii");
-};
-//function expression
-console.log(f2); 
+// let f1=10;
+// console.log(f1);
+// let f2=function (){
+//    console.log("hii");
+// };
+// //function expression
+// console.log(f2); 
 
-//! 4) function with argument and parameters
-// undefined + undefined = NaN
+// //! 4) function with argument and parameters
+// // undefined + undefined = NaN
 
-// Missing arguments are assigned undefined
-function sum(n1,n2,...n){//...n used for rest parameter array must be last parameter  in parameter list 
-   console.log(arguments,Array.isArray(arguments))// arguments object (array-like, not a true Array)
-   let n3=n1+n2;
-   console.log(n);
-   console.log(n3);
-}
-sum(12,12,3,4);
-//where is going extra argument
+// // Missing arguments are assigned undefined
+// function sum(n1,n2,...n){//...n used for rest parameter array must be last parameter  in parameter list 
+//    console.log(arguments,Array.isArray(arguments))// arguments object (array-like, not a true Array)
+//    let n3=n1+n2;
+//    console.log(n);
+//    console.log(n3);
+// }
+// sum(12,12,3,4);
+// //where is going extra argument
 
-//GEC padhna h 
+// //GEC padhna h 
 
-// closure is a temporary which is created whenever chilkd functin tries to access parent function property
-//5)nested function
-function Parent(){
-   let money=50000;
-   console.log(money);
-   function Child(){
-      let saving=5000;
-      console.log(saving);
-      console.log(saving,money);// due to closure,not inheritence but by closure(a temporary space created whe use parent property in child function) when child function call then parent function data stored in closure 
-   
-   }
-   Child();
-}
-Parent();
-//! 6)  return type function
-function sum(n1=0,n2=0){
-   let result=n1+n2
-   console.log(result);
-   return result;
-}
-// let Result1=sum;// to copy function
-let Result=sum(5,10);
-console.log(Result);
+// // closure is a temporary which is created whenever chilkd functin tries to access parent function property
+// //5)nested function
+// function Parent(){
+//    let money=50000;
+//    console.log(money);
+//    function Child(){
+//       let saving=5000;
+//       console.log(saving);
+//       console.log(saving,money);// due to closure,not inheritence but by closure(a temporary space created whe use parent property in child function) when child function call then parent function data stored in closure 
+
+//    }
+//    Child();
+// }
+// Parent();
+// //! 6)  return type function
+// function sum(n1=0,n2=0){
+//    let result=n1+n2
+//    console.log(result);
+//    return result;
+// }
+// // let Result1=sum;// to copy function
+// let Result=sum(5,10);
+// console.log(Result);
 
 
-//! 7) higher order function (hof) condition are-
-// a function should return another function or 
-function counter(){// higher order function 
-   let count=0;
-   function child(){
-      count++;
-      console.log("count is",count);
-      
-   }
-   return child;
-   
-}
-let c1=counter()
-c1()
-c1()
-c1()
-//i.e. data hiding 
+// //! 7) higher order function (hof) condition are-
+// // a function should return another function or 
+// function counter(){// higher order function 
+//    let count=0;
+//    function child(){
+//       count++;
+//       console.log("count is",count);
 
-// a function should accept another function as argument 
+//    }
+//    return child;
 
-//array.forEach(function(){})
-// forEach higher order 
-//function(){} is callback
-// callback - a function which passes as an argument 
-function calculate(x){
+// }
+// let c1=counter()
+// c1()
+// c1()
+// c1()
+// //i.e. data hiding 
 
-}
-calculate(function(){})
+// // a function should accept another function as argument 
+
+// //array.forEach(function(){})
+// // forEach higher order 
+// //function(){} is callback
+// // callback - a function which passes as an argument 
+// ////////
+// // function calculate(x){
+
+// // }
+// // calculate(function(){});
+// ///////
+
+// //! 8 Immediately invoked function expression (IIFE)
+// // ek baar call ho or kaam kr k khtm ho jaye 
+// // (function declare)(function call)
+// // kuch issue h M
+// // (function(){console.log("Immediately invoked function expressio")})();
+
+// //! 9)arrow function - es6 --> shorter syntax
+// const f=()=>{
+//    console.log("arrow function");
+// };
+// f();//fn calll
+// console.log(f);
+
+// const g= x =>{
+//    console.log("arrow function",x);
+// }
+// g(10);
+
+// const h=(x,y) =>{
+//    console.log("arrow function",x,y);
+// }
+// h(10,20);
+
+// const i= x =>console.log("arrow function",x);
+// i(10);
+
+// //explicit return // {} must be used to return 
+// const f4=(n1=0,n2=0)=>{
+//    return n1+n2;
+// };
+// console.log(f4(7,8));
+
+// // implicit return 
+// const f5=(n1=0,n2=0)=>n1+n2
+// console.log(f5(7));
+
+// let obj={firstname:"sakshi"};
+// const f6=()=>({firstname:"sakshi"});
+// console.log(f6);
+// console.log(f6());
+
+//! OBJECTS{}
+//combination of key and value is a property of an object
+//create object 
+// const obj1 = { name: "sakshi", course: "MCA", section: "D", rollNo: 1234567890 };
+// console.log(obj1)
+
+// // obj property read
+// console.log(obj1.name)
+// console.log(obj1.rollNo)
+
+// // obj property update
+// obj1.name="ram"
+// console.log(obj1.name)
+
+// // obj add new key or existing key update
+// obj1.name="rashi"//update
+// console.log(obj1.name)
+// obj1.lastName="Kapoor"//add
+// console.log(obj1)
+
+// //delete key 
+// delete obj1.section
+// console.log(obj1)
+
+// //these aare object CRUD operations - create , read, update, delete 
+// // loop over an object
+// for (let i in obj1){
+//    //console.log(i,obj1.i);// give values undefined 
+//    console.log(i,obj1[i]);// 
+// }
+
+// // iterate array using for loop
+// let arr=[10,20,30];
+// for(let i=0;i<arr.length;i++){
+//    console.log(i,arr[i]);
+// }
+
+// // for in // index
+// for(let i in arr){
+//    console.log(i);
+// }
+
+// //for of // element 
+// for(let i of arr){
+//    console.log(i);
+// }
+
+// console.log(obj1);
+// let n="name";
+// // console.log(obj1.n);//undefined
+// console.log(obj1[n]);
+
+// //! nested Object 
+// let employee={fullname:{firstName:"sakshi",lastName:"rajput"},age:11,address:{city:"Noida",state:"uttar pradesh",pin:201301,coordinates:{lat:23456,long:12345}}};
+// console.log(employee);
+// //access value of nested object 
+// console.log(employee.address.coordinates.long);
+// console.log(employee.fullname.lastName);
+
+// //! destructuring 
+// let user={
+//    fname:"John",lname:"James",age:20
+// }
+// let{age,fname:firstname,lname,salary="NA"}=user;//default value salary="NA" // aliasing fname:firstname
+// console.log(age,firstname)
+// console.log(age,firstname,lname)
+// //console.log(age,fname,lname,salary);// error undefined
+// console.log(age,firstname,lname,salary)// give default value 
+
+///////////////////////////////////////
+
+//! ARRAYS :-
+// let arr1 = [10, 20, 30, 40, 50];
+// //           0   1   2   3   4
+// console.log(arr1);
+// console.log(arr1.length); // 5 <-- is a property not method
+
+//! ARRAY METHODS
+// let arr1 = [10, 20, 30, 40, 50];
+// console.log(arr1); // [10, 20, 30, 40, 50]
+
+//! push() : adds element at the last of an array
+// arr1.push(60, 70, 80);//can add one or multiple elements using push().
+// console.log(arr1); // [10, 20, 30, 40, 50, 60, 70, 80]
+
+//! pop() : removes element from last of an array
+// arr1.pop();// no argument in it ignore args
+// console.log(arr1); // [10, 20, 30, 40, 50, 60, 70]
+
+//! unshift() : adds element at the first of an array
+// arr1.unshift(100, 200);
+// console.log(arr1); // [100, 200, 10, 20, 30, 40, 50, 60, 70]
+
+//! shift() : removes element from front of an array
+// arr1.shift();// no arg arr1.shift(10); ignore args
+// console.log(arr1); // [200, 10, 20, 30, 40, 50, 60, 70]
+
+//! splice(position, deleteCount , newElements)// position - index;deleteCount - no. of elements delete; newElements - elements you want to insert
+// let arr2 = [100, 200, 300, 400, 500];
+
+//!-- ADD To add without deleting:
+// arr2.splice(2, 0, 250);
+// console.log(arr2); // [100, 200, 250, 300, 400, 500];
+
+//!-- DELETE
+// arr2.splice(1, 3);
+// console.log(arr2); // [100, 500]
+
+//!-- DELETE AND ADD
+// arr2.splice(1, 2, "HelloWorld");
+// console.log(arr2); // [100, 'HelloWorld', 400, 500]
+
+// SLICE slice() does NOT change the original array.
+//! slice(startIndex , endIndex)
+// slice always ingores endIndex i.e from startIndex  to  endIndex-1
+
+// //          -4   -3   -2   -1//negative indexing.
+// let arr3 = [100, 200, 300, 400];
+
+// let val1 = arr3.slice(1, 3);
+// console.log(val1); // [200,300]
+
+// let val2 = arr3.slice(-3, -1);
+// console.log(val2); // [200,300]
+
+// let val3 = arr3.slice(-3, 3);
+// console.log(val3); // [200,300]
+
+let arr4 = [10, 20, 30, 40, 50];
+
+//! forEach(()=>{}) : returns undefined
+let res1 = arr4.forEach((ele, idx, arr) => {
+  // console.log(ele);
+  return ele + 5;
+});
+console.log("forEach --->", res1);
+//does not return an array.
+//The return only returns from that individual callback execution. forEach() itself still returns undefined.
+// iterate an array 
+arr4.forEach((ele) => {
+    console.log( ele + 5);
+});
+
+//! map(()=>{}) : returns new array
+//map() is used when you want to transform every element and get a new array.
+let res2 = arr4.map((ele, idx, arr) => {
+  // console.log(ele);
+  return ele + 5;
+});
+console.log("map ---->", res2);
+
+//! filter(()=>{}) : returns new filtered array
+//filter() is used when you want to select elements based on a condition.
+//filter() returns a new array containing all elements that satisfy the condition.
+let res3 = arr4.filter((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("filter ---->", res3);
+
+//! find(()=>{}) : returns single value which satisfy the condition
+// find() is similar to filter(), but there is a very important difference.Gives the first matching element then stop searching but in filter all matching element
+let res4 = arr4.find((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("find ---->", res4);
+
+//! findIndex(()=>{})
+   //findIndex() is almost the same as find().
+   // But instead of returning the element, it returns the index of the first matching element.
+let res5 = arr4.findIndex((ele, idx, arr) => {
+  return ele > 30;
+});
+console.log("find ---->", res5);
+
