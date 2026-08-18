@@ -504,49 +504,129 @@ Function
 // let val3 = arr3.slice(-3, 3);
 // console.log(val3); // [200,300]
 
-let arr4 = [10, 20, 30, 40, 50];
+//////////////////////////
 
-//! forEach(()=>{}) : returns undefined
-let res1 = arr4.forEach((ele, idx, arr) => {
-  // console.log(ele);
-  return ele + 5;
-});
-console.log("forEach --->", res1);
-//does not return an array.
-//The return only returns from that individual callback execution. forEach() itself still returns undefined.
-// iterate an array 
-arr4.forEach((ele) => {
-    console.log( ele + 5);
-});
+// let arr4 = [10, 20, 30, 40, 50];
 
-//! map(()=>{}) : returns new array
-//map() is used when you want to transform every element and get a new array.
-let res2 = arr4.map((ele, idx, arr) => {
-  // console.log(ele);
-  return ele + 5;
-});
-console.log("map ---->", res2);
+// //! forEach(()=>{}) : returns undefined
+// let res1 = arr4.forEach((ele, idx, arr) => {
+//   // console.log(ele);
+//   return ele + 5;
+// });
+// console.log("forEach --->", res1);
+// //does not return an array.
+// //The return only returns from that individual callback execution. forEach() itself still returns undefined.
+// // iterate an array 
+// arr4.forEach((ele) => {
+//     console.log( ele + 5);
+// });
 
-//! filter(()=>{}) : returns new filtered array
-//filter() is used when you want to select elements based on a condition.
-//filter() returns a new array containing all elements that satisfy the condition.
-let res3 = arr4.filter((ele, idx, arr) => {
-  return ele > 30;
-});
-console.log("filter ---->", res3);
+// //! map(()=>{}) : returns new array
+// //map() is used when you want to transform every element and get a new array.
+// let res2 = arr4.map((ele, idx, arr) => {
+//   // console.log(ele);
+//   return ele + 5;
+// });
+// console.log("map ---->", res2);
 
-//! find(()=>{}) : returns single value which satisfy the condition
-// find() is similar to filter(), but there is a very important difference.Gives the first matching element then stop searching but in filter all matching element
-let res4 = arr4.find((ele, idx, arr) => {
-  return ele > 30;
-});
-console.log("find ---->", res4);
+// //! filter(()=>{}) : returns new filtered array
+// //filter() is used when you want to select elements based on a condition.
+// //filter() returns a new array containing all elements that satisfy the condition.
+// let res3 = arr4.filter((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("filter ---->", res3);
 
-//! findIndex(()=>{})
-   //findIndex() is almost the same as find().
-   // But instead of returning the element, it returns the index of the first matching element.
-let res5 = arr4.findIndex((ele, idx, arr) => {
-  return ele > 30;
-});
-console.log("find ---->", res5);
+// //! find(()=>{}) : returns single value which satisfy the condition
+// // find() is similar to filter(), but there is a very important difference.Gives the first matching element then stop searching but in filter all matching element
+// let res4 = arr4.find((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("find ---->", res4);
 
+// //! findIndex(()=>{})
+//    //findIndex() is almost the same as find().
+//    // But instead of returning the element, it returns the index of the first matching element.
+// let res5 = arr4.findIndex((ele, idx, arr) => {
+//   return ele > 30;
+// });
+// console.log("find ---->", res5);
+
+////////////////////////////rehta h content 
+//Promise
+//const API="https://dummyjson.com/todos";
+// let p1=fetch(API);// return promise
+// console.log(p1);
+
+// // p1.then((resp)=>{
+// //   // console.log(resp);
+// //   console.log(resp.json());
+// // });
+
+// // p1.catch((err)=>{
+// //   console.log(err)
+// // });
+
+// p1.then((resp)=>{
+//   let p2=resp.json();//return promise
+//   console.log(p2);// gives data 
+//   p2.then((data)=>console.log(data.todos));// to take out data
+//   p2.catch((err)=>console.log(err));
+// });
+// p1.catch((err)=>{
+//   console.log(err)
+// });
+
+////!ASYNC AWAIT uses with function 
+// async function fetchTodosData(){
+//   try{
+//   let resp= await fetch("https://dummyjson.com/todos");
+//   let data=resp.json();
+//   console.log(data);
+//   }
+//   catch(error){
+//     console.log(error);
+//   }
+// }
+// fetchTodosData();
+//////////////////////////////////
+// //!timer functions
+// //1 set interval (callback_function,intervalTime)
+// console.log("start")
+// let id=setInterval(()=>{
+//   console.log("hii sakshi");
+// },1000);// async code 
+// // 2 set timeout(callback_function,delay)
+// setTimeout(()=>{
+//   console.log("byee");
+//   clearInterval(id)
+// },8000);// async code 
+// console.log("end")
+// /*start
+//  end
+// 8 hii sakshi
+// bye   e*/
+/////////////////////////////////////
+// ////!Event Loop - a bgd mechanism that allows js to perform long running tasks(fetching data and setTimeout )
+// ////js by default syncronous 
+// //// have callstack ,event loop(check callstack empty or not),
+// ////  web API(async code is here stored and start count down), and microtask(higher priority i.e promises ) queue and macrotask/task/callback queue like setTimeout,etc
+// console.log("start");
+// setTimeout(function T1(){
+//   console.log("T1!");
+// },5000);
+// Promise.resolve().then(function P1(){
+//   console.log("promise p1");
+// })
+// console.log("hiii");
+// setTimeout(function T2(){
+//   console.log("T2!");
+// },2000);
+// console.log("end");
+
+// // start
+// // hiii
+// // end
+// // promise p1
+// // T2!
+// // T1!
