@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* decendent */
+      section div {
+        background-color: yellow;
+      }
+
+      /* child */
+      section > div {
+        background-color: red;
+      }
+
+      /* general siblings */
+      section ~ div {
+        background-color: aqua;
+      }
+
+      /* adjacent sibling */
+      section + div {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Combinator Selectors</h1>
+
+    <!-- 
+    There are 4 types:
+
+    1) Decendent : targets direct child as well as nested child elements
+    - denoted by empty space
+
+    2) Child : targets direct child elements
+    - denoted by grater than symbol >
+
+    3) General Siblings : targets multiple elements after the closing tag
+    - denoted by tilde symbol ~
+
+    4) Adjacent Sibling : targets single element which is immediate after the closing tag   
+    - denoted by plus symbol +
+    -->
+
+    <section>
+      <div>div 1</div>
+      <div>div 2</div>
+      <article>
+        <div>div 3</div>
+        <div>div 4</div>
+      </article>
+      <div>div 5</div>
+    </section>
+    <div>div 6</div>
+    <div>div 7</div>
+    <nav>nav 1</nav>
+    <div>div 8</div>
+  </body>
+</html>
