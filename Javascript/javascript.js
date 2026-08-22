@@ -7,7 +7,7 @@
 
 //!TYPES OF PRINTING STATEMENTS
 //1)console.log() //shortcut is clg
-//2)documents.write()<-------deprecate  give no space btw two prints 
+//2)document.write()<-------deprecate  give no space btw two prints 
 //3)document.writeln()<...deprecate. give space btw two prints 
 //ln add sapce between words
 // console.log("External js");
@@ -21,8 +21,8 @@
 
 /*
 Data types: which type of data we store in a variable
-there are two types data types 
-1).primitive :(immutable | call by value) 
+there are two types data types
+1).primitive :(immutable | call by value)
 we have 7 types
 nummber
 string "" ''
@@ -31,7 +31,7 @@ undefined
 null
 bigint //range (-2^53 -1 to 2^53-1)That is actually the safe integer range for Number, not BigInt.
 symbol
-2).non prirmitive:(mutable | call by reference) 
+2).non prirmitive:(mutable | call by reference)
 3 types
 Arrays
 Object
@@ -93,7 +93,7 @@ Function
 
 // /******************************************/
 // //mutable console is object
-// console.log()//console is object , log is method 
+// console.log()//console is object,log is method 
 
 //! types of variable
 //two types of variable local and global
@@ -123,7 +123,7 @@ Function
 //declare & initialize               +1                      +1                   +1
 // re-declare                        +1                      -1                   -1
 //re-initialize                      +1                      +1                   -1
-// //re-declare and re-initialize       +1                      -1                   -1
+//re-declare and re-initialize       +1                      -1                   -1
 
 // let x;
 // console.log(x);
@@ -143,15 +143,16 @@ Function
 
 //!temporal dead zone
 //the period from start odf a block until let / const variable is initialized .During this period accessing variable causes a ReferenceError
+
 // no TDZ in var
 //eg
 // console.log(a)
 // var a=10;
 
 //TDZ in let ,const
-// console.log(x)
+// console.log(x)//ReferenceError: Cannot access 'x' before initialization
 // let x=12;
-// const x=12;
+// // const x=12;
 
 //! var is known as function scope- do not create separate scope for var 
 // function test(){
@@ -184,6 +185,7 @@ Function
 // //  console.log(l);
 // // let l=20;
 // // console.log(l); //!error
+
 // for(let i=0;i<5;i++){
 //    console.log("hii",i);
 // }
@@ -230,7 +232,7 @@ Function
 //!method of dry run in js
 /** //!global execution context>=gec
  *  !declaration phase                                         execution phase
- * 
+ *
  */
 // console.log("start");
 // console.log(a);
@@ -245,7 +247,7 @@ Function
 // console.log(a);
 // console.log("end");
 
-//! anonymous function : dunction without name
+//! anonymous function : function without name
 // function (){
 
 // }
@@ -255,7 +257,7 @@ Function
 // }
 // console.log(greet);
 
-//! funstion expression :used to call anonymous function
+//! function expression :used to call anonymous function
 // let f1=10;
 // console.log(f1);
 // let f2=function (){
@@ -268,7 +270,7 @@ Function
 // // undefined + undefined = NaN
 
 // // Missing arguments are assigned undefined
-// function sum(n1,n2,...n){//...n used for rest parameter array must be last parameter  in parameter list 
+// function sum(n1,n2,...n){//...n used for rest parameter array ,must be last parameter  in parameter list 
 //    console.log(arguments,Array.isArray(arguments))// arguments object (array-like, not a true Array)
 //    let n3=n1+n2;
 //    console.log(n);
@@ -279,7 +281,7 @@ Function
 
 // //GEC padhna h 
 
-// // closure is a temporary which is created whenever chilkd functin tries to access parent function property
+// // closure is a temporary which is created whenever child functin tries to access parent function property
 // //5)nested function
 // function Parent(){
 //    let money=50000;
@@ -373,8 +375,8 @@ Function
 
 // let obj={firstname:"sakshi"};
 // const f6=()=>({firstname:"sakshi"});
-// console.log(f6);
-// console.log(f6());
+// console.log(f6);//()=>({firstname:"sakshi"})
+// console.log(f6());//{firstname: 'sakshi'}
 
 //! OBJECTS{}
 //combination of key and value is a property of an object
@@ -462,7 +464,7 @@ Function
 // console.log(arr1); // [10, 20, 30, 40, 50, 60, 70, 80]
 
 //! pop() : removes element from last of an array
-// arr1.pop();// no argument in it ignore args
+// arr1.pop();// no argument in it ignore args if written
 // console.log(arr1); // [10, 20, 30, 40, 50, 60, 70]
 
 //! unshift() : adds element at the first of an array
@@ -546,15 +548,19 @@ Function
 
 // //! findIndex(()=>{})
 //    //findIndex() is almost the same as find().
-//    // But instead of returning the element, it returns the index of the first matching element.
+//    // But instead of returning the element, it returns the index of the first matching 
+// // element.
 // let res5 = arr4.findIndex((ele, idx, arr) => {
 //   return ele > 30;
 // });
 // console.log("find ---->", res5);
 
 ////////////////////////////rehta h content 
-//Promise
-//const API="https://dummyjson.com/todos";
+// //Promise - A JavaScript Promise is an object representing the eventual completion or failure of
+// //  an asynchronous operation. It serves as a placeholder for a value that is initially unknown 
+// // but will be delivered in the future.
+
+// const API="https://dummyjson.com/todos";
 // let p1=fetch(API);// return promise
 // console.log(p1);
 
@@ -568,7 +574,7 @@ Function
 // // });
 
 // p1.then((resp)=>{
-//   let p2=resp.json();//return promise
+//   let p2=resp.json();//return promise data
 //   console.log(p2);// gives data 
 //   p2.then((data)=>console.log(data.todos));// to take out data
 //   p2.catch((err)=>console.log(err));
@@ -578,17 +584,26 @@ Function
 // });
 
 ////!ASYNC AWAIT uses with function 
+// //await is used to treat async code like a sync code so that flow go in sequence ,
+// // and move to next step while complete that particular task
+
 // async function fetchTodosData(){
 //   try{
 //   let resp= await fetch("https://dummyjson.com/todos");
 //   let data=resp.json();
+//   console.log(resp);//Response {type: 'cors', url: 'https://dummyjson.com/todos', redirected: false, status: 200, ok: true, …}
 //   console.log(data);
 //   }
+// // Promise {<pending>}
+// // [[Prototype]]:Promise
+// //  [[PromiseState]]:"fulfilled"
+// //  [[PromiseResult]]: Object
+
 //   catch(error){
 //     console.log(error);
 //   }
 // }
-// fetchTodosData();
+// fetchTodosData();/..
 //////////////////////////////////
 // //!timer functions
 // //1 set interval (callback_function,intervalTime)
@@ -607,10 +622,11 @@ Function
 // 8 hii sakshi
 // bye   e*/
 /////////////////////////////////////
-// ////!Event Loop - a bgd mechanism that allows js to perform long running tasks(fetching data and setTimeout )
+// ////!Event Loop - a background mechanism that allows javascript to perform long running tasks(fetching data 
+// // //and setTimeout )
 // ////js by default syncronous 
 // //// have callstack ,event loop(check callstack empty or not),
-// ////  web API(async code is here stored and start count down), and microtask(higher priority i.e promises ) queue and macrotask/task/callback queue like setTimeout,etc
+// ////  web API(async code is here stored and start count down), and microtask(higher priority contain promises ) queue and macrotask/task/callback queue like setTimeout,etc
 // console.log("start");
 // setTimeout(function T1(){
 //   console.log("T1!");
@@ -630,5 +646,3 @@ Function
 // // promise p1
 // // T2!
 // // T1!
-
-
